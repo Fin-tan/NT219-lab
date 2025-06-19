@@ -138,9 +138,9 @@ void getSignatureFromFile(string filename, string &signature) {
 int selectWork()
 {
 	int choice;
-	wcout << L"1. Generate ECC keys and write to files" << endl;
-	wcout << L"2. Sign a file with ECC" << endl;
-	wcout << L"3. Verify a file with ECC" << endl;
+	wcout << L"1. Generate ECDSA keys and write to files" << endl;
+	wcout << L"2. Sign a file with ECDSA" << endl;
+	wcout << L"3. Verify a file with ECDSA" << endl;
 	wcout << L"4. Generate RSA keys and write to files" << endl;
 	wcout << L"5. Sign a file with RSA-PSS" << endl;
 	wcout << L"6. Verify a file with RSA-PSS" << endl;
@@ -481,8 +481,8 @@ int main(int argc, char **argv)
 	slash = '/';
 #endif
 
-	string filePublicKey = "." + slash + "eccPublic.key";
-	string filePrivateKey = "." + slash + "eccPrivate.key";
+	string filePublicKey = "." + slash + "ECDSAPublic.key";
+	string filePrivateKey = "." + slash + "ECDSAPrivate.key";
 	string fileMessage = "." + slash + "message.txt";
 	string fileSignature = "." + slash + "signature.txt";
     string fileRSAPublicKey = "." + slash + "rsaPublic.key";
