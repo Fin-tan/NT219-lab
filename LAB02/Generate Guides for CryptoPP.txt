@@ -1,0 +1,23 @@
+Creat guide using header/class code files
+1. install doxygen
+pacman -S mingw-w64-x86_64-doxygen
+
+2. Creat default configuration file
+doxygen -g cryptoppguides
+
+3. edit the configFile
+# Doxyfile configuration
+PROJECT_NAME           ="Crypto++ Library"
+INPUT                  = /path/to/cryptopp
+eg:
+INPUT                  ="D:/Labs_Crypto/NT219-2025/cryptopp890"
+OUTPUT_DIRECTORY       = /path/to/output/docs
+eg: 
+OUTPUT_DIRECTORY       ="D:/Labs_Crypto/NT219-2025/cryptoguides"
+
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+RECURSIVE              = YES
+
+4. Run to generate the guides
+doxygen cryptoppguides

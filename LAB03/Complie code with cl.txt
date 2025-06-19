@@ -1,0 +1,11 @@
+1. Complie code với cl
+1.1. Cài đặt cl
++ Cài đặt cl theo hướng dẫn sau: https://code.visualstudio.com/docs/cpp/config-msvc
+1.2 Compile code với cl
++ Mở Developer Command Prompt for VS2022
+cl /c /EHsc *.cpp
+lib /OUT:cryptlib.lib *.obj
++ Copy file cryptlib.lib vào thư mục /lib của project. Tạo thư mục /include chứa các file .h (tương tự g++, clang++)
++ Compile với cl:
+cd clcode
+cl DES-CBC.cpp lib\cryptlib.lib /Iinclude/cryptopp
